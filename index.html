@@ -18,20 +18,30 @@ body {
     color: #222;
 }
 
+/* ---------- SIMPLE TEXT HEADER ---------- */
 .site-header {
     background: #ffffff;
     padding: 18px 15px;
     text-align: center;
+    border-bottom: 3px solid #FFB800;
 }
 
-.site-logo {
-    width: 300px;
-    max-width: 85%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+.site-header h1 {
+    margin: 0;
+    color: #10358e;
+    font-size: 28px;
+    letter-spacing: 1px;
 }
 
+.site-header p {
+    margin: 4px 0 0;
+    color: #FFB800;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+/* ---------- NAV MENU ---------- */
 nav {
     background: #10358e;
     padding: 12px;
@@ -44,49 +54,36 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    margin: 6px 12px;
+    margin: 6px 14px;
     font-weight: bold;
     display: inline-block;
+    font-size: 15px;
 }
 
 nav a:hover {
     color: #FFB800;
 }
 
-.banner-section {
-    width: 100%;
-    background: #ffffff;
-    text-align: center;
-    padding-bottom: 20px;
-}
-
-.main-banner {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.banner-buttons {
-    padding: 18px 10px 5px;
-}
-
-.tagline {
+/* ---------- HERO ---------- */
+.hero {
     background: linear-gradient(135deg, #1645B5, #2785e3);
     color: #ffffff;
     text-align: center;
-    padding: 35px 20px;
+    padding: 55px 20px;
 }
 
-.tagline h2 {
-    margin: 0 0 8px;
-    font-size: 28px;
+.hero h2 {
+    margin: 0 0 10px;
+    font-size: 30px;
 }
 
-.tagline p {
-    margin: 0;
+.hero p {
+    margin: 0 0 20px;
     color: #FFD87A;
+    font-size: 16px;
 }
 
+/* ---------- BUTTONS ---------- */
 .btn {
     display: inline-block;
     background: #FFB800;
@@ -111,6 +108,7 @@ nav a:hover {
     background: #1da851;
 }
 
+/* ---------- SECTIONS ---------- */
 .section {
     padding: 45px 20px;
     text-align: center;
@@ -176,6 +174,23 @@ nav a:hover {
     font-weight: bold;
 }
 
+/* ---------- LOGO STRIP (BEFORE FOOTER) ---------- */
+.logo-strip {
+    width: 100%;
+    height: 90px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.logo-strip img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+/* ---------- FOOTER ---------- */
 footer {
     background: #10358e;
     color: white;
@@ -199,19 +214,22 @@ footer {
 }
 
 @media(max-width:768px) {
-    .site-logo {
-        width: 220px;
+    .site-header h1 {
+        font-size: 22px;
     }
     nav a {
         font-size: 13px;
         margin: 5px 8px;
     }
-    .tagline h2 {
+    .hero h2 {
         font-size: 22px;
     }
     .card {
         width: 100%;
         max-width: 320px;
+    }
+    .logo-strip {
+        height: 60px;
     }
 }
 </style>
@@ -220,7 +238,8 @@ footer {
 <body>
 
 <header class="site-header">
-    <img src="logo.png" alt="AARO Digital Services Logo" class="site-logo">
+    <h1>AARO</h1>
+    <p>DIGITAL SERVICES &amp; SOLUTIONS</p>
 </header>
 
 <nav>
@@ -231,19 +250,13 @@ footer {
     <a href="#contact">Contact</a>
 </nav>
 
-<section class="banner-section" id="home">
-    <img src="banner.png" alt="AARO Digital Services Banner" class="main-banner">
-</section>
-
-<div class="tagline">
+<section class="hero" id="home">
     <h2>Your Digital Needs, Our Smart Solutions</h2>
     <p>Your Trusted Digital Service Partner in Haldia</p>
 
-    <div class="banner-buttons">
-        <a href="#services" class="btn">Explore Services</a>
-        <a href="#callback" class="btn btn-green">Request a Callback</a>
-    </div>
-</div>
+    <a href="#services" class="btn">Explore Services</a>
+    <a href="#callback" class="btn btn-green">Request a Callback</a>
+</section>
 
 <section class="section" id="services">
     <h2>Our Digital Services</h2>
@@ -287,7 +300,7 @@ footer {
 <section class="section" id="callback" style="background:linear-gradient(135deg,#10358e,#2785e3); color:white;">
     <h2 style="color:white;">📞 Request a Callback</h2>
     <p>Fill the form and our team will contact you shortly.</p>
-    <a href="https://docs.google.com/forms/d/1o1G0QZRK7hCBBvLH1Pdor6ShK6imsajTiWP3pyS5nFI/edit?usp=forms_home&ouid=114604418500921661071&ths=true" target="_blank" rel="noopener noreferrer" class="btn">
+    <a href="https://docs.google.com/forms/d/1o1G0QZRK7hCBBvLH1Pdor6ShK6imsajTiWP3pyS5nFI/edit" target="_blank" rel="noopener noreferrer" class="btn">
         📞 Request a Callback
     </a>
 </section>
@@ -306,6 +319,10 @@ footer {
         </a>
     </div>
 </section>
+
+<div class="logo-strip">
+    <img src="logo.png" alt="AARO Digital Services Logo">
+</div>
 
 <footer>
     <p>© 2026 AARO Digital Services &amp; Solutions</p>
