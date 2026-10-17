@@ -64,12 +64,22 @@ nav a:hover {
     color: #FFB800;
 }
 
-/* ---------- HERO ---------- */
+/* ---------- HERO (BANNER BACKGROUND) ---------- */
 .hero {
-    background: linear-gradient(135deg, #1645B5, #2785e3);
+    background:
+        linear-gradient(rgba(10, 30, 80, 0.55), rgba(10, 30, 80, 0.55)),
+        url("banner.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #ffffff;
     text-align: center;
-    padding: 55px 20px;
+    padding: 90px 20px;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero h2 {
@@ -221,6 +231,10 @@ footer {
         font-size: 13px;
         margin: 5px 8px;
     }
+    .hero {
+        padding: 60px 15px;
+        min-height: 300px;
+    }
     .hero h2 {
         font-size: 22px;
     }
@@ -254,8 +268,10 @@ footer {
     <h2>Your Digital Needs, Our Smart Solutions</h2>
     <p>Your Trusted Digital Service Partner in Haldia</p>
 
-    <a href="#services" class="btn">Explore Services</a>
-    <a href="#callback" class="btn btn-green">Request a Callback</a>
+    <div>
+        <a href="#services" class="btn">Explore Services</a>
+        <a href="#callback" class="btn btn-green">Request a Callback</a>
+    </div>
 </section>
 
 <section class="section" id="services">
@@ -300,7 +316,7 @@ footer {
 <section class="section" id="callback" style="background:linear-gradient(135deg,#10358e,#2785e3); color:white;">
     <h2 style="color:white;">📞 Request a Callback</h2>
     <p>Fill the form and our team will contact you shortly.</p>
-    <a href="https://docs.google.com/forms/d/1o1G0QZRK7hCBBvLH1Pdor6ShK6imsajTiWP3pyS5nFI/edit" target="_blank" rel="noopener noreferrer" class="btn">
+    <a href="YOUR_GOOGLE_FORM_LINK" target="_blank" rel="noopener noreferrer" class="btn">
         📞 Request a Callback
     </a>
 </section>
